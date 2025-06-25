@@ -1,0 +1,37 @@
+.dev-title {
+  @include centerizeTag(space-between);
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+
+  &__title {
+  }
+  &__list {
+    @include centerizeTag();
+    gap: 25px;
+  }
+  &__item {
+    color: $color-white;
+    font-size: $font-size-default;
+    font-weight: bold;
+    padding-top: 10px;
+    &.active {
+      color: $color-secondary;
+      border-top: 2px solid $color-secondary;
+    }
+  }
+  &__btns {
+    @include centerizeTag();
+    gap: 10px;
+  }
+  &__btn {
+    width: 40px;
+    height: 40px;
+    @include centerizeTag();
+    color: $color-white;
+    border-radius: 7px;
+    &.active {
+      background-color: $color-secondary;
+    }
+  }
+}
